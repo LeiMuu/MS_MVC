@@ -8,14 +8,15 @@ namespace WebApplication1.Controllers
 {
     public class HelloWorldController : Controller
     {
-        // GET: HelloWorld
+        // GET: /HelloWorld/
         public string Index()
         {
             return "This is my <b>default</b> action...";
         }
-        public string Welcome()
+        // GET: /HelloWorld/Welcome/ 
+        public string Welcome(string name, int numTimes = 1)
         {
-            return "This is the Welcome action method...";
+            return HttpUtility.HtmlEncode("Hello " + name+ ", NumTime is: "+ numTimes);
         }
     }
 }
