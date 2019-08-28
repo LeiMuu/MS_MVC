@@ -13,5 +13,14 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+
+        // controller url 規則測試&dynamic ControllerBase.ViewBag{get;}練習
+        public ActionResult Welcome(string name, int id = 1)
+        {
+            ViewBag.Message = "Hello " + name;
+            ViewBag.Id = id;
+
+            return View();
+        }
     }
 }

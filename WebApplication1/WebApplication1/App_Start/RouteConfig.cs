@@ -20,11 +20,8 @@ namespace WebApplication1
             );
             routes.MapRoute(
                 name: "Hello",
-                url: "{controller}/{action}/{name}/{id}"
-            );
-            routes.MapRoute(
-                name: "Movie",
-                url: "{controller}/{action}/{name}/{id}"
+                url: "{controller}/{action}/{name}/{id}",
+                defaults: new { controller = "HelloWorld", action = "Index", name= UrlParameter.Optional, id = UrlParameter.Optional }
             );
         }
     }
