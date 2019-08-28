@@ -21,7 +21,11 @@ namespace WebApplication1
             routes.MapRoute(
                 name: "Hello",
                 url: "{controller}/{action}/{name}/{id}"
-       );
+            );
+            routes.MapRoute(
+                name: "Movie",
+                url: "{controller}/{action}/{name}/{id}"
+            );
         }
     }
 }
